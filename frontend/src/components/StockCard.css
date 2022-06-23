@@ -1,0 +1,115 @@
+.stock_card_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/media/images/geo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 25px;
+  padding-top: 25px;
+}
+
+.hdg.hdg_2.mix-hdg_dark.snack.stock_card,
+.hdg.hdg_4.mix-hdg_dark.snack.stock_card {
+  color: #ffffff;
+}
+
+.stock_card.box_container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.card_data {
+  min-width: 30%;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 10px;
+}
+
+.stock_card.card_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  background: #ffffff;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  transform: scale(1);
+  transition: all 300ms ease-in;
+}
+.stock_card.picturte img {
+  width: 150px;
+  height: 150px;
+  padding-bottom: 10px;
+}
+
+.stock_card_description,
+.stock_card_name {
+  margin-left: 10px;
+}
+
+.stock_card_name {
+  font-size: 12px;
+}
+
+.stock_card.card_item:hover {
+  transform: scale(1.03) translateY(-10px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  transition: all 300ms ease-in;
+}
+
+.stock_card.baged {
+  display: flex;
+  margin-top: 5px;
+  margin-right: 5px;
+  justify-content: flex-end;
+}
+
+.stock_card.triangle {
+  width: 0;
+  height: 0;
+  border-top: 35px solid rgba(20, 194, 217, 0.8);
+  border-left: 35px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+span.stock_card.triangle_number {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@media (max-width: 414px) {
+  .stock_card.card_item {
+    width: 140px;
+    height: 140px;
+  }
+  .stock_card.picturte img {
+    width: 100px;
+    height: 100px;
+  }
+  .stock_card_description {
+    font-size: 12px;
+  }
+  .stock_card_name {
+    font-size: 10px;
+  }
+  .stock_card.triangle {
+    border-top: 20px solid rgba(20, 194, 217, 0.8);
+    border-left: 20px solid transparent;
+  }
+  span.stock_card.triangle_number {
+    font-size: 10px;
+  }
+}
