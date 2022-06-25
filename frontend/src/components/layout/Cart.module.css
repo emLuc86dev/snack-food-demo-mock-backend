@@ -59,7 +59,7 @@
   background-color: #164950;
   border-color: #164950;
   color: white;
-  transition: all 200ms ease-in;
+  transition: all 200ms ease;
 }
 
 .actions .button--alt {

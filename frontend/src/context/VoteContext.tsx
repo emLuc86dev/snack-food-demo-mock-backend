@@ -8,6 +8,7 @@ type typeNode = {
 
 type VoteContextPlusType = VoteContextType & {
   signUp: (user: User) => void;
+  makeVote: (user: User) => void;
 };
 
 const user = JSON.parse(localStorage.getItem("user")!);
@@ -15,7 +16,7 @@ const user = JSON.parse(localStorage.getItem("user")!);
 const VoteContext = createContext({} as VoteContextPlusType);
 
 const initalState: VoteContextType = {
-  user: user ? user : null,
+  user: {} as User,
   users: [],
   isLogged: false,
   messageVote: {} as messageVoteType,
@@ -35,9 +36,20 @@ export const VoteProvider = ({ children }: typeNode) => {
     }
     dispatch({ type: "SIGN_UP", payload: user });
   };
+
+  const makeVote = (user: User) => {
+    dispatch({ type: "VOTE", payload: user });
+  };
   return (
     <VoteContext.Provider
-      value={{ user, users, isLogged, messageVote, signUp }}
+      value={{
+        user,
+        users,
+        isLogged,
+        messageVote,
+        signUp,
+        makeVote,
+      }}
     >
       {children}
     </VoteContext.Provider>

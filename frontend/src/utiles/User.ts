@@ -4,7 +4,7 @@ export type User = {
   email: string
   phone: string;
   message?: string | null;
-  createdAt: Date | null
+  createdAt: Date 
   votedAt?: Date | null
 };
 

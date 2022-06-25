@@ -9,7 +9,7 @@ export type SnanckType = {
 };
 
 type actionType =
-  | { type: "GET_SNACKS"; payload: SnanckType }
+  | { type: "GET_SNACKS"; payload: SnanckType[] }
   | { type: "LOADING" };
 
 export type snackStateType = {
@@ -19,7 +19,7 @@ export type snackStateType = {
 
 
 
-const snackReducer = (state: any, action: actionType) => {
+const snackReducer = (state: snackStateType, action: actionType) => {
   switch (action.type) {
     case "GET_SNACKS":
       return {

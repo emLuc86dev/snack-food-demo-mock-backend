@@ -13,8 +13,8 @@ type SnackContextType = {
 };
 
 const initialState: snackStateType = {
+  snacksStock: [],
   isLoading: false,
-  snacksStock: [] as SnanckType[],
 };
 
 const apiURL = "http://localhost:4000//";

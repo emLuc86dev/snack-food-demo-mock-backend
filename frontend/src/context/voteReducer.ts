@@ -2,7 +2,7 @@ import { VoteContextType } from "../utiles/typeUtility";
 import { User } from "../utiles/User";
 
 type VoteActionType =
-  | { type: "IS_LOGGED" }
+  | { type: "IS_LOGGED", payload: User }
   | { type: "SIGN_UP"; payload: User }
   | {type: "VOTE", payload: User};
 
@@ -25,7 +25,7 @@ const voteReducer = (state: VoteContextType, action: VoteActionType) => {
         isLogged: true,
         messageVote: {
             info: "Great",
-            text: `User ${state.user.email} has been logged`,
+            text: `User ${action.payload.email} has been logged`,
           },
       };
       case "VOTE":

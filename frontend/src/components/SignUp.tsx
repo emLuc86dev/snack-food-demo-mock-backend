@@ -3,7 +3,6 @@ import React, { useContext, useState } from "react";
 import VoteContext from "../context/VoteContext";
 import {
   checkListType,
-  formDataType,
   MessageType,
 } from "../utiles/typeUtility";
 import { User } from "../utiles/User";
@@ -33,7 +32,7 @@ const initialState: User = {
   email: "",
   phone: "",
   message: "",
-  createdAt: null,
+  createdAt: new Date(),
   votedAt: null,
 };
 
@@ -98,7 +97,7 @@ const SignUp = () => {
     signUp(formData);
 
     localStorage.setItem("user", JSON.stringify(formData));
-    
+
     setFormData(initialState);
     setStockMessage({
       info: "Great",

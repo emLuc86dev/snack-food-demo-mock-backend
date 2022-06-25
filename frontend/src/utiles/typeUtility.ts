@@ -14,14 +14,14 @@ export type MessageType = {
     amount: number;
   };
 
-  export type formDataType = {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-    message: string;
-    loggedAt: Date | null
-  };
+  // export type formDataType = {
+  //   firstName: string;
+  //   lastName: string;
+  //   email: string;
+  //   phone: string;
+  //   message: string;
+  //   loggedAt: Date | null
+  // };
 
  export type checkListType = {
     name: string;
